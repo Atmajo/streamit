@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  streamit:
+    container_name: streamit
+    image: streamit
+    build: .
+    ports:
+      - "3000:3000"

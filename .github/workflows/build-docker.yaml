@@ -8,8 +8,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Build Docker image
         run: docker build . -t atmajo/streamapp-app:latest
 
       - name: Push Docker image
-        run: docker push atmajo/streamapp-app:latest
+        run: |
+        docker login -u atmajo -p ${{ sectrets.DOCKER_HUB_KEY }}
+        docker push atmajo/streamapp-app:latest

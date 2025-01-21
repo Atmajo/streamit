@@ -1,6 +1,5 @@
 name: Publish image to Docker Hub
-on: 
-  [workflow_dispatch]
+on: [workflow_dispatch]
 
 jobs:
   publish_image:
@@ -14,5 +13,5 @@ jobs:
 
       - name: Push Docker image
         run: |
-        docker login -u atmajo -p ${{ sectrets.DOCKER_HUB_KEY }}
-        docker push atmajo/streamapp-app:latest
+          docker login -u atmajo -p ${{ sectrets.DOCKER_HUB_KEY }}
+          docker push atmajo/streamapp-app:latest

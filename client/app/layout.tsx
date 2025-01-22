@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${epilogue.className}`}
+        className={`${epilogue.className} bg-[radial-gradient()] text-white`}
       >
         {children}
       </body>
